@@ -4,12 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Не забудьте поменять заголовок по вкусу. -->
         <title>Javascript Problem</title>
         <link rel="stylesheet" type="text/css" href="./static/main.min.css">
         <meta name="theme-color" content="#ffffff">
     </head>
 
     <body>
+        <!--
+             HTML-болванка проста и ничего интересного не содержит кроме тега
+             main в который мы загружаем problem-root. Она также подсасывает
+             статические ресурсы -- скомпилированый js и css.
+             В готовом продукте, вместо подсасывания файлов, они сворачиваются
+             в трубочку и вставляются в сам html как data url.
+             В результате получается полностью самодостаточный html-файл.
+        -->
         <main class="section" data-is="problem-root">
         </main>
         <script type="text/javascript" src="./static/main.min.js"></script>

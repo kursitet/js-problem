@@ -86,7 +86,9 @@ module.exports = {
 
     ],
 
-    // These libraries are assumed to be provided externally, through the site root templates.
+    // These libraries are assumed to be provided externally,
+    // through the site root templates.
+    // We don't currently do anything of the sort, but the capability is there.
     externals: {
         // library name : variable name.
         // "jquery": "$"
@@ -149,7 +151,8 @@ module.exports = {
                 })
             },
             {
-                // Image loader.
+                // Image loader. Yes, you can put images into html,
+                // as well as import them inside riot tags.
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
                     { loader: 'file-loader' }
@@ -160,6 +163,7 @@ module.exports = {
                 use: 'json-loader'
             },
             {
+                // You can use yaml to load larger amounts of data.
                 test: /\.yaml$/i,
                 use: [
                     { loader: 'yaml-loader'},
